@@ -1,2 +1,18 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import { goto, beforeNavigate, afterNavigate } from '$app/navigation';
+
+	const handleClick = () => {
+		console.log('Placing your order');
+		goto('/products');
+	};
+	beforeNavigate((navigation) => {
+		console.log({ before: navigation });
+	});
+	afterNavigate((navigation) => {
+		console.log({ after: navigation });
+	});
+</script>
+
+<h1>Welcome Home</h1>
+
+<button on:click={handleClick}>Place Order : Products</button>

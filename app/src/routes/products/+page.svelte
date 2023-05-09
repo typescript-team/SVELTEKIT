@@ -9,7 +9,8 @@
 	<h2>
 		<a href="/products/{product.id}" data-sveltekit-preload-data>
 			{product.title}
-		</a>
+		</a>		
 	</h2>
 	<p>{product.description}</p>
+	<hr />
 {/each}

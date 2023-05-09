@@ -1,4 +1,8 @@
 <script lang="ts">
+	// $lib 폴더가 에러 발생 ==> npm run check
+	// 컴파일러가 사물의 위치를 파악하는데 도움이 된다.
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <nav>
@@ -13,26 +17,8 @@
 	<a data-sveltekit-preload-data href="/spoon">Spoon</a>
 </nav>
 
-<header class="layout-header">Header</header>
+<Header />
 <div class="container mx-auto my-6 max-w-lg">
 	<slot />
 </div>
-<footer class="layout-footer">Footer</footer>
-
-<style>
-	.layout-header {
-		background-color: #264653;
-		color: #f4a261;
-		font-size: 30px;
-		text-align: center;
-		padding: 10px;
-	}
-
-	.layout-footer {
-		background-color: #264653;
-		color: #e9c46a;
-		font-size: 30px;
-		text-align: center;
-		padding: 10px;
-	}
-</style>
+<Footer />
